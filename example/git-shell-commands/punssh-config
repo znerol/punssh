@@ -1,0 +1,9 @@
+#!/bin/sh
+#
+# PunSSH git integration -- git-shell-command
+#
+# Put this script into ${HOME}/git-shell-commands and set the users shell to
+# git-shell. This ensures that authorized peers can collect their tunnel
+# configuration.
+
+/usr/local/bin/punssh-config "$@"

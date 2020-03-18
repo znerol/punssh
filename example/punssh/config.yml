@@ -1,0 +1,25 @@
+---
+tunnels:
+  - name: machine1-rdp-reverse
+    template: reverse
+    pubkey: ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIK9Io/1jnDiILJv1m5hRhqzF1VzD/uUDKzhFDrDXdHkN
+    host: jump.example.com
+    user: punch
+    local: localhost:5900
+    remote: localhost:59011
+
+  - name: machine2-rdp-reverse
+    template: reverse
+    pubkey: ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDFQy4Psl2NHbxh0rVrr9nnGeE/V3Y0MLT82PzlZWcyG
+    host: jump.example.com
+    user: punch
+    local: localhost:5900
+    remote: localhost:59012
+
+  - name: machine3-rdp-reverse
+    template: reverse
+    pubkey: ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGc1nLuNlugaTHOJKreSs/cp2BEwadNorXKjz5NY1rre
+    host: jump.example.com
+    user: punch
+    local: localhost:5900
+    remote: localhost:59013

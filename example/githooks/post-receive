@@ -1,0 +1,12 @@
+#!/bin/sh
+#
+# PunSSH git integration -- post-receive hook.
+#
+# Use this post-receive hook in a punssh config repository on a jump host.
+# This will regenerate the authorized_keys file after each push.
+
+CONFIG=${HOME}/punssh/config.yml
+HOST="$(hostname -f)"
+AUTHORIZED_KEYS="${HOME}/.ssh/authorized_keys"
+
+/usr/local/bin/punssh-auth -f "${CONFIG}" "${HOST}" > "${AUTHORIZED_KEYS}"
